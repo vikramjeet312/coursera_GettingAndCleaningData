@@ -27,7 +27,9 @@ We can then rbind() the "train" and "test" subdata to get the required merged da
 
 Then we will apply grepl() to extract only the mean and std variables from this merged data
 
-Now, we add the appropriate variable names to the dataset.
+Now we will make the "Activity" column of the dataset a factor variable and set its levels according to activity_labels.txt so that we get the appropriate names eg. Walking, Sitting, Walking_Upstairs etc.
+
+Now, we add the appropriate variable names to the dataset using the gsub command on the column names of the dataset
 
 And finally get the required tidy dataset using the ddply() function.
-Use write.table() to create a .txt file if this tidy dataset
+Use write.table() to create a .txt file of this tidy dataset
