@@ -38,7 +38,7 @@ data<- rbind(train,test)
 #STEP 2: Extract only the mean and standard deviation measurements
 data2<- data[,which(grepl("mean|std|Subject|Activity", names(data)))]
 
-#STEP 3: Descriptive activity names, activity_labels.txt already read in as variable 'labels'
+#STEP 3: Descriptive activity names like 'Walking', 'Sitting', "Walking_Upstairs", activity_labels.txt already read in as variable 'labels'
 data2$Activity<-factor(data$Activity)
 levels(data2$Activity)<- labels[,2]
 
