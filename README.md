@@ -1,7 +1,12 @@
 # coursera_GettingAndCleaningData
+
+## Please open the folder "Desktop/data working directory" to view the "CodeBook", "tinyData.txt" and "run_analysis.R"
+
 Course project for the Getting and Cleaning Data course on Coursera
 
 Dataset being used is the: UCI HAR Dataset.
+
+
 
 ##Files
 
