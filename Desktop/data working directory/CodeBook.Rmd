@@ -1,0 +1,33 @@
+---
+title: "CodeBook"
+output: html_document
+---
+
+The script "run_analysis.R" performs the 5 steps as mentioned in the problem statement.
+
+##Variables
+
+The files "x_train", "subject_train", "y_train", "x_test", "subject_test", "y_test" are all the data files from the downloaded dataset
+
+"features" file contains the names of all the 561 variables
+
+"data" is the merged data.frame from both train and test data
+"data2" is the data.frame whichhas only mean and sd data
+"tidyData" is the tidy data which is finally outputted
+
+##Process
+
+We first load all the "train" files into R
+We then apply the colnames from the features file
+Next we cbind() all the data to create a "train" subdata
+
+Similarly we load all the "test" files into R, give appropriate colnames and cbind() to get "test" subdata
+
+We can then rbind() the "train" and "test" subdata to get the required merged dataset.
+
+Then we will apply grepl() to extract only the mean and std variables from this merged data
+
+Now, we add the appropriate variable names to the dataset.
+
+And finally get the required tidy dataset using the ddply() function.
+Use write.table() to create a .txt file if this tidy dataset
